@@ -1,0 +1,21 @@
+# Build artifacts
+*.o
+*.out
+*.exe
+a.out
+
+# Libraries
+*.a
+*.so
+*.dll
+
+# Build dirs
+/build/
+/bin/
+/obj/
+/out/
+
+# Editor junk
+*.swp
+*~
+
