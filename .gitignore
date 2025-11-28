@@ -3,6 +3,7 @@
 *.out
 *.exe
 a.out
+hello
 
 # Libraries
 *.a
