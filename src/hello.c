@@ -1,17 +1,14 @@
+//include/hello.c
+
 #include <stdio.h>
+#include "hello.h"
 
 
-
-#define PI 3.1416
-
-float area_of_circle( float radius );
-
-int main()
+void hello(float r)
 {
   printf("Sata Andagi! \n");
-  float area = area_of_circle(21);
+  float area = area_of_circle(r);
   printf("area of circle : %f \n", area);
-  return 0;
 }
 
 float area_of_circle( float radius ){

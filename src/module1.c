@@ -4,6 +4,6 @@
 
 // define sayHello function
 
-void sayHello(){
-    printf("hello world! ");
+void sayHello() {
+    printf("hello world! \n");
 }

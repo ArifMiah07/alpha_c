@@ -1,5 +1,5 @@
-#ifndef MODULE1.h
-#define MODULE.h
+#ifndef MODULE1_H
+#define MODULE1_H
 
 void sayHello(); // declare sayHello function
 
