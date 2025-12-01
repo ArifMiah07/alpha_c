@@ -54,23 +54,63 @@
 
 const primeAgain = () => {
   // preload prime numbers
-  let primeNumberList = [2, 3];
-  // pike a rnadom number
-  const randomNumber = 29;
+  let list = [2, 3];
+  // pike a random number
+  const number = 59;
   // check if prime number divisor is exist in the list
-  // find sqrt of randome number
-  const sqrt_ = Math.round(Math.sqrt(randomNumber)); //
-  console.log(sqrt_);
+  // find sqrt of random number
+  const sqrt_ = Math.round(Math.sqrt(number)); //
+  // console.log(sqrt_);
+  // first check if that sqrt_ is a prime
+  // const is_sqrt_prime = isPrime(sqrt_);
+  // console.log(sqrt_, is_sqrt_prime ? "is prime" : "is not prime");
+  // do something
+  const lastNumb: number | undefined = Number(list.at(-1));
+  console.log("last num", lastNumb);
   // comapre
-  for (let i = 0; i < primeNumberList.length; i++) {
-    // check
-    if (i < sqrt_) {
-      //
+  if (lastNumb < sqrt_) {
+    // check prime if that sqrt is odd number
+    if (!isEven(sqrt_)) {
+      // console.log("is prime? ", isPrime(sqrt_));
     } else {
-      //
-      //
+      // console.log("even number cant be prime");
+    }
+    //
+    // console.log(list[i]);
+    // check if prime after last number from list and break after finding a prime
+  } else {
+    //
+    //
+    console.log("not");
+  }
+  for (let i = lastNumb + 1; i < sqrt_; i++) {
+    if (lastNumb < sqrt_) {
+      if (!isEven(i)) {
+        if (isPrime(i)) {
+          list.push(i);
+        }
+      }
     }
   }
+  console.log(list);
 };
 
+// define a function that check if a number is prime
+const isPrime = (number: number) => {
+  //
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+};
+
+// check if is a even number
+const isEven = (number: number) => {
+  //
+  if (number % 2 === 0) return true;
+  return false;
+};
+
+// console.log(isPrime(37));
 primeAgain();
+console.log(isEven(37));
